@@ -1,5 +1,5 @@
 //ENVIRONMENT VARIABLES FROM env.yaml
-const yenv = require('../expressejs/node_modules/yenv')
+const yenv = require('yenv')
 const env = yenv('env.yaml', { env: process.env.NODE_ENV })
 const {PORT=process.env.PORT, SECRET} = env
 
@@ -14,7 +14,7 @@ const morgan = require('morgan')
 
 //set view engine to express-react-views
 app.set('view engine', 'jsx');
-app.engine('jsx', require('../expressejs/node_modules/express-react-views').createEngine());
+app.engine('jsx', require('express-react-views').createEngine());
 
 
 ////////////
