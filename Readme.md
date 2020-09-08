@@ -1,5 +1,7 @@
 ## USING THIS TEMPLATE:
 
+- Make sure to run npm install
+
 - Environmental variables defined in env.yaml, so create a env.yaml that looks like this...
 
 ```yaml
