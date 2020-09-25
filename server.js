@@ -41,6 +41,7 @@ app.use(
 );
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true })); //comment if not using forms
+app.use(methodOverride("_method"));
 // app.use(express.json()) uncomment if using json
 app.use(morgan("tiny")); //logging
 
