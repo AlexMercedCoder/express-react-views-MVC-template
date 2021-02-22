@@ -7,7 +7,6 @@ const {
   SECRET = "secret",
   NODE_ENV = "development",
 } = process.env;
-console.log(PORT);
 
 //Bringing in Express
 const express = require("express");
@@ -17,6 +16,7 @@ const app = express();
 const session = require("express-session");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
+const {log} = require("mercedlogger")
 
 //set view engine to express-react-views
 app.set("view engine", "jsx");
@@ -48,5 +48,5 @@ app.get("/", (req, res) => {
 
 //LISTENER
 app.listen(PORT, () => {
-  console.log(`Your are listening on port ${PORT}`);
+  log.green("Server Started",`Your are listening on port ${PORT}`);
 });
